@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #5d3fd3;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    padding: 0.6rem;
+    z-index: 99;
+    box-shadow: 0 2px 20px #fff;
+}
+
+.active {
+    background-color: #fff;
+    color: #5d3fd3;
+    border-bottom: 1px solid #000000;
+    padding: 0 0.5em;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(254, 253, 255);
+}
+
+header h1 {
+    display: inline-block;
+    padding-top: 33px;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.menu li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem;
+    display: inline-block;
+}
+
+nav {
+    position: absolute;
+    background-color: #5d3fd3;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    top: 100%;
+    color: #fff;
+    display: none;
+    align-items: flex-end;
+}
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+main {
+    flex: 1 0 auto;
+    margin-top: 124px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    background: url("indexpics/hero_image.webp") no-repeat center center/cover;
+    background-color: #5d3fd3;
+    background-position: 70%;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.hero-text {
+    background-color: rgba(174, 0, 255, .10);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration-style: solid;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+.motivation {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.physical-benefits,
+.mental-benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 3px solid rgb(94, 77, 113);
+    padding: 10px 10px;
+    width: 50%;
+    margin: 0 10px;
+}
+
+.pb-img,
+.mb-img {
+    width: 400px;
+    background-color: rgb(247, 240, 254);
+    display: flex;
+    align-items: center;
+}
+
+.pb-img img,
+.mb-img img {
+    width: 13em;
+    padding: 1rem 0.25rem;
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.workout-pm-benefits,
+.healthy-meals-pm-benefits {
+    display: flex;
+    padding: 50px 0;
+    box-shadow: 0 15px 10px #5d3fd3;
+}
+
+.workout-benefits h2,
+h3 {
+    text-decoration: solid;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration-line: underline;
+}
+
+.healthy-meals-benefits h2,
+h3 {
+    text-decoration: solid;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration-line: underline;
+}
+
+.motivation>h2,
+.workout-benefits>h2,
+.healthy-meals-benefits>h2 {
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: normal;
+}
+
+.motivation>h2 {
+    margin-bottom: 25px;
+}
+
+.healthy-meals-benefits>h2 {
+    margin-top: 25px;
+}
+
+.physical-benefits ul {
+    list-style-type: none;
+}
+
+.mental-benefits ul {
+    list-style-type: none;
+}
+
+.workout-routines {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 1rem 1rem;
+}
+
+.workout-routines ul {
+    list-style-type: none;
+}
+
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday,
+.saturday,
+.sunday {
+    padding: 50px 0;
+}
+
+.workout-routines p,
+.workout-routines li {
+    padding: 10px 0;
+}
+
+.workout-routines h2 {
+    text-align: center;
+    letter-spacing: normal;
+}
+
+video {
+    width: 200px;
+}
+
+.tuesday-videos,
+.wednesday-videos,
+.friday-videos,
+.saturday-videos,
+.sunday-videos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.workout-vid {
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    font-weight: bolder;
+    padding: 25px;
+}
+
+.meal-preps {
+    padding: 1rem;
+}
+
+.meal-preps h2 {
+    letter-spacing: normal;
+    text-align: center;
+    text-decoration: solid;
+    text-decoration-line: underline;
+}
+
+table {
+    background: rgb(225, 209, 241);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption,
+td,
+th {
+    padding: 1rem;
+}
+
+caption {
+    background-color: rgb(110, 66, 151);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+th {
+    background: rgb(225, 209, 241);
+    text-decoration: solid;
+    text-decoration-line: underline;
+}
+
+tr:nth-of-type(2n) {
+    background-color: rgb(204, 167, 239);
+}
+
+.signup-page {
+    background-image: url("../images/sign_up_bg.webp");
+    background-size: cover;
+    background-position: 50%;
+    flex-grow: 1;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.signup-form {
+    background-color: rgba(110, 66, 151, 0.6);
+    padding: 20px;
+    box-shadow: 0 15px 20px #fff;
+    display: block;
+    max-width: 700px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.signup-form,
+form>h2,
+form>h3,
+.p-center {
+    text-align: center;
+    text-decoration-line: none;
+    padding-bottom: 10px;
+}
+
+.form-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-input-box:nth-child(2n) {
+    justify-content: end;
+}
+
+.user-input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.user-input-box label {
+    width: 95%;
+    font-size: 15px;
+}
+
+.input {
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #5d3fd3;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+button {
+    margin: 5px 10px;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #5d3fd3;
+}
+
+.send-clear-buttons {
+    display: flex;
+    justify-content: center;
+    width: -webkit-fill-available;
+}
+
+button:hover {
+    border: 1px solid #5d3fd3;
+    color: #5d3fd3;
+    background-color: #fff;
+}
+
+.gender-buttons {
+    display: contents;
+    padding-top: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.responsive-content {
+    text-align: center;
+    font-style: italic;
+    padding: 0 10px;
+}
+
+.responsive-content img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+footer {
+    background-color: #5d3fd3;
+    flex-shrink: 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    height: 5em;
+}
+
+.social-media h1 {
+    display: none;
+}
+
+.social-networks {
+    list-style-type: none;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    padding: 2px 28px;
+    font-size: 25px;
+}
+
+.social-media {
+    width: 50%;
+    justify-content: space-evenly;
+    padding-bottom: 7px;
+}
+
+.social-media li {
+    display: flex;
+    padding: 0 15px;
+}
+
+.social-networks i {
+    color: #fff;
+    padding: 5%;
+}
+
+.social-networks li {
+    display: inline-block;
+
+}
+
+@media screen and (max-width: 1178px) {
+    .workout-pm-benefits,
+    .healthy-meals-pm-benefits {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    .physical-benefits,
+    .mental-benefits {
+        width: 90%;
+        padding: 10px 5px;
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 40px;
+        height: auto;
+    }
+
+    .pb-img,
+    .mb-img {
+        width: auto;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .signup-form {
+        min-width: 280px;
+    }
+
+    .user-input-box {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .user-input-box:nth-child(2n) {
+        justify-content: space-between;
+    }
+
+    .gender-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .signup-page {
+        background-position: 58%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    th {
+        display: none;
+    }
+
+    td {
+        display: grid;
+    }
+
+    td:first-child {
+        padding-top: 2rem;
+    }
+
+    td:last-child {
+        padding-bottom: 2rem;
+    }
+
+    td::before {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    td:nth-of-type(1)::before {
+        content: "day";
+    }
+
+    td:nth-of-type(2)::before {
+        content: "breakfast: ";
+    }
+
+    td:nth-of-type(3)::before {
+        content: "lunch:";
+    }
+
+    td:nth-of-type(4)::before {
+        content: "evening meal:";
+    }
+
+    td:nth-of-type(5)::before {
+        content: "snacks:";
+    }
+
+    .social-networks {
+        list-style-type: none;
+        font-size: 17px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-media li {
+        display: flex;
+        padding: 0 15px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .menu a:hover {
+        color: #5d3fd3;
+        background-color: #fff;
+    }
+
+    i:hover {
+        color: grey;
+    }
+}
+
+@media screen and (min-width: 833px) {
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    .hero {
+        background-position: 50%;
+
+    }
+
+    .tuesday-videos,
+    .wednesday-videos,
+    .saturday-videos,
+    .sunday-videos {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .workout-vid {
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    header h1 {
+        letter-spacing: normal;
+        text-align: center;
+        padding-left: 12px;
+        margin-right: 23px;
+    }
+
+    .active {
+        padding: 0;
+    }
+}

@@ -421,18 +421,6 @@ button:hover {
     object-fit: contain;
 }
 
-footer {
-    background-color: #5d3fd3;
-    flex-shrink: 0;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
-    height: 5em;
-}
-
 .social-media h1 {
     display: none;
 }
